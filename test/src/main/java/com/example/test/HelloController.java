@@ -12,6 +12,7 @@ import org.w3c.dom.Text;
 import java.io.IOException;
 
 public class HelloController {
+    private int counter = 0;
 
     @FXML
     private Button button0;
@@ -112,7 +113,29 @@ public class HelloController {
     @FXML
     public void loginClicked() {
         String userPass = null;
+        String userCode = null;
 
+
+        switch (counter) {
+            case 0:
+                userPass = inputField.getText();
+                consoleTesting.appendText("The user pass is " + userPass);
+                inputField.setText("");
+                counter++;
+                break;
+
+            case 1:
+                userCode = inputField.getText();
+                consoleTesting.appendText("The user code is " + userCode);
+                inputField.setText("");
+                personalPage.setDisable(false);
+                break;
+
+            default:
+                throw new IllegalStateException("Unexpected value: " + counter);
+        }
+
+        /*
         if (inputField.getText() != null) {
             userPass = inputField.getText();
             consoleTesting.setText("The user pass is " + userPass);
@@ -128,6 +151,6 @@ public class HelloController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+             */
         }
-    }
 }
