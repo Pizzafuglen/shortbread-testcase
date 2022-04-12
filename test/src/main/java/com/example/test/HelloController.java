@@ -1,7 +1,15 @@
 package com.example.test;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import org.w3c.dom.Text;
+
+import java.io.IOException;
 
 public class HelloController {
 
@@ -110,6 +118,16 @@ public class HelloController {
             consoleTesting.setText("The user pass is " + userPass);
             inputField.setText("");
 
+            Stage dialog = new Stage();
+            dialog.setTitle("Verification");
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("popup-login.fxml"));
+            try {
+                Scene dialogScene = new Scene(fxmlLoader.load(), 640, 480);
+                dialog.setScene(dialogScene);
+                dialog.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test.HelloController">
+   <children>
+      <Slider layoutX="56.0" layoutY="110.0" max="657.0" minorTickCount="1" showTickMarks="true" />
+      <Slider layoutX="154.0" layoutY="160.0" max="1153.0" min="258.0" minorTickCount="1" orientation="VERTICAL" showTickMarks="true" />
+      <Label layoutX="183.0" layoutY="14.0" prefHeight="53.0" prefWidth="235.0" text="VERIFICATION">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="331.0" layoutY="122.0" mnemonicParsing="false" text="RadioButton" />
+      <RadioButton layoutX="331.0" layoutY="143.0" mnemonicParsing="false" text="RadioButton" />
+      <RadioButton layoutX="331.0" layoutY="164.0" mnemonicParsing="false" text="RadioButton" />
+      <ChoiceBox layoutX="315.0" layoutY="268.0" prefWidth="150.0" />
+      <Button layoutX="275.0" layoutY="326.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>
