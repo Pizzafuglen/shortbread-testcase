@@ -2,6 +2,7 @@ package com.example.test;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
@@ -10,9 +11,11 @@ import javafx.stage.Stage;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class HelloController {
-    private int counter = 0;
+    private int counter;
 
     @FXML
     private Button button0;
@@ -119,16 +122,18 @@ public class HelloController {
         switch (counter) {
             case 0:
                 userPass = inputField.getText();
-                consoleTesting.appendText("The user pass is " + userPass);
+                consoleTesting.appendText("The user pass is " + userPass + "\n");
                 inputField.setText("");
                 counter++;
                 break;
 
             case 1:
                 userCode = inputField.getText();
-                consoleTesting.appendText("The user code is " + userCode);
+                consoleTesting.appendText("The user code is " + userCode + "\n");
                 inputField.setText("");
                 personalPage.setDisable(false);
+                loginPage.setDisable(true);
+                counter--;
                 break;
 
             default:
@@ -152,5 +157,5 @@ public class HelloController {
                 e.printStackTrace();
             }
              */
-        }
+    }
 }
